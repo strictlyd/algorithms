@@ -105,7 +105,7 @@ class MyArray {
     }
 
     deleteAtStart() {
-        // Average time complexity = O(n)x
+        // Average time complexity = O(n)
         // Worst time complexity   = O(n)
         // Worst space complexity  = O(n)
 
