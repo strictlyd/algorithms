@@ -68,6 +68,9 @@ class MyArray {
         // Worst time complexity   = O(n)
         // Worst space complexity  = O(n)
 
+        if (index < 0)                   { throw new Error("Index cannot be less than zero."); }
+        if (index >= this._array.length) { throw new Error("Index cannot be greater than MyArray length."); }
+
         let newArray = new Array(this._array.length + 1);
 
         for (let ii = 0; ii < this._array.length + 1; ii++) {
@@ -119,6 +122,9 @@ class MyArray {
         // Average time complexity = O(n)
         // Worst time complexity   = O(n)
         // Worst space complexity  = O(n)
+
+        if (index < 0)                   { throw new Error("Index cannot be less than zero."); }
+        if (index >= this._array.length) { throw new Error("Index cannot be greater than MyArray length."); }
 
         let newArray = new Array(this._array.length - 1);
         let jj       = 0;
