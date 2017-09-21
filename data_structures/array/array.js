@@ -21,12 +21,7 @@
 
 "use strict";
 
-function getRandomWholeNumberBetweenRange(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    // Add 1 to max to make range inclusive
-    return Math.floor(Math.random() * (max + 1 - min)) + min;
-}
+const Helper = require("../../helpers/helper.js");
 
 class MyArray {
 
@@ -36,7 +31,7 @@ class MyArray {
     constructor(length = 0) {
         this._array = [];
         for (let ii = 0; ii < length; ii++) {
-            this._array[ii] = getRandomWholeNumberBetweenRange(1, 10);
+            this._array[ii] = Helper.getRandomWholeNumberBetweenRange(1, 10);
         }
     }
 
