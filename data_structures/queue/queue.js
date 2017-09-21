@@ -1,7 +1,7 @@
 /**
  * For the given FIFO Queue ADT, implement the methods and analyze time and space complexity
  *
- * enqueue(data)
+ * enqueue(element)
  *
  * dequeue()
  *
@@ -11,7 +11,7 @@
  *
  * isEmpty()
  *
- * search(data)
+ * search(element)
  *
  **/
 
@@ -50,7 +50,7 @@ class Queue {
         return this._queue.length === MAX_ARRAY_LENGTH || false;
     }
 
-    enqueue(data) {
+    enqueue(element) {
         // https://cs.stackexchange.com/questions/62717/understanding-time-complexity-of-dynamic-array-implementation-of-stack
         // Average time complexity = O(n), depends if Array.prototype.push has a pointer reference to the last Array index
         // Worst time complexity   = O(n), depends if Array.prototype.push has a pointer reference to the last Array index
@@ -58,7 +58,7 @@ class Queue {
 
         if (this.isFull()) { throw new Error("Queue is already full."); }
 
-        this._queue.push(data);
+        this._queue.push(element);
     }
 
     dequeue() {
@@ -86,7 +86,7 @@ class Queue {
      * Return true if at least one element is found
      * Otherwise, return false.
      **/
-    search(data) {
+    search(element) {
         // Average time complexity = O(n)
         // Worst time complexity   = O(n)
         // Worst space complexity  = O(n)
@@ -94,7 +94,7 @@ class Queue {
         let ii = 0;
 
         while (ii < this._queue.length) {
-            if (this._queue[ii] === data) {
+            if (this._queue[ii] === element) {
                 return true;
             }
 
