@@ -112,7 +112,3 @@ class Queue {
 }
 
 module.exports = new Queue();
-
-let q = new Queue(11);
-console.log(q);
-console.log(q.search(1));
