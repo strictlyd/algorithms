@@ -25,7 +25,7 @@ const MAX_ARRAY_LENGTH = Math.pow(2,32) - 1;
 class Queue {
 
     /**
-     * Initializes a Queue with existing values
+     * Initializes an Array of values
      **/
     constructor(length = 0) {
         this._queue = [];
