@@ -63,8 +63,8 @@ class Queue {
 
     dequeue() {
         // https://cs.stackexchange.com/questions/62717/understanding-time-complexity-of-dynamic-array-implementation-of-stack
-        // Average time complexity = O(n), depends if Array.prototype.push has a pointer reference to the last Array index
-        // Worst time complexity   = O(n), depends if Array.prototype.push has a pointer reference to the last Array index
+        // Average time complexity = O(n), depends if Array.prototype.shift has a pointer reference to the last Array index
+        // Worst time complexity   = O(n), depends if Array.prototype.shift has a pointer reference to the last Array index
         // Worst space complexity  = O(n)
 
         if (this.isEmpty()) { throw new Error("Queue is already empty."); }
